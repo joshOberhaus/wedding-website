@@ -47,6 +47,25 @@ $(document).ready(function () {
         offset: '75%'
     });
 
+    $(window).on("scroll", function() {
+        var currentPos = $(window).scrollTop();
+      
+        $('.mynav ul li a').each(function() {
+          var sectionLink = $(this);
+          // capture the height of the navbar
+          var navHeight = $('#nav-bar').outerHeight() + 60;
+          var section = $(sectionLink.attr('href'));
+      
+          // subtract the navbar height from the top of the section
+          if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+            $('.mynav li').removeClass('activenav');
+            sectionLink.parent().addClass('activenav');
+          } else {
+            sectionLink.parent().removeClass('activenav');
+          }
+        });        
+      });
+
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
         animation: "slide"

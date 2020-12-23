@@ -358,6 +358,17 @@ Hero
     letter-spacing: 10px;
   }
 }
+
+.activenav 
+{
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ffffff85, 1px -1px 0 #ffffff85, -1px 1px 0 #ffffff85, 1px 1px 0 #ffffff85;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  color: $accent-color;
+}
 .navigation {
   transition: all 300ms ease-in-out;
   position: fixed;
