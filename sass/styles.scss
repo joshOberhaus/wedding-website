@@ -44,15 +44,15 @@ body {
   //fix for iOS
 }
 .player {
-  height: 450px;
-  overflow: hidden;
+  height: auto;
   position: relative; /* requires for to position video properly */
-  z-index: -2;
+  max-height: 50vh;
+  overflow: hidden;
   
 }
 
 video {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -71,6 +71,11 @@ ul {
   padding: 0;
 }
 
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0;
+}
 // li {
 //   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
 //   border-bottom: 1px solid #ccc;
@@ -217,7 +222,6 @@ Waypoinsts
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
   visibility: visible
 }
-
 /* ==========================================================================
 Navigation
 ========================================================================== */
@@ -295,6 +299,24 @@ Navigation
 /* ==========================================================================
 Hero
 ========================================================================== */
+.carousel-caption{
+  p {
+    color: rgba(255,255,255,0.8);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+    font-size: 18px;
+  };
+  h3 {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+}
+.carousel-control.left, .carousel-control.right {
+  background-image:none !important;
+  filter:none !important;
+}
 
 .hero {
   background: url('../img/hero-min.jpg') center center;
@@ -791,13 +813,11 @@ Engagement Pics
 Embed video
 ========================================================================== */
 #video-bg {
-  height: 450px;
 }
 #video-content {
   width: 100%;
-  height: 100%;
   padding-top: 100px;
-  position: relative;  
+  position: absolute;  
   text-align: center;
   z-index: 1;
   display: block;
