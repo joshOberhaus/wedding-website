@@ -58,13 +58,13 @@
                         <nav>
                             <ul class="primary-nav">
                                 <li><a href="#intro">Our Story</a></li>
-                                <li><a href="#party">The Party</a></li>
-                                <li><a href="#events">The Big Day</a></li>
+                                <li><a href="#party">Our Entourage</a></li>
                                 <li><a href="#eng-pics">Engagement</a></li>
-                                <li><a href="#gifts">In lieu of Gifts...</a></li>
                             </ul>
                             <ul class="member-actions">
+                                <li><a href="#events" class="login">The Big Day</a></li>
                                 <li><a href="#map" class="login">Venue</a></li>
+                                <li><a href="#gifts" class="login">In lieu of Gifts...</a></li>
                                 <li><a href="#hotels" class="login">Accomodations</a></li>
                                 <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                             </ul>
@@ -87,29 +87,24 @@
 
                         <script>
                             // Set the date we're counting down to
-                            var countDownDate = new Date("May 29,2022 15:37:25").getTime();
-
-                            // Update the count down every 1 second
-                            var x = setInterval(function () {
-
+                            var countDownDate = new Date("May 29,2022 00:00").getTime();
                                 // Get today's date and time
                                 var now = new Date().getTime();
 
                                 // Find the distance between now and the count down date
-                                var distance = countDownDate - now;
+                                var delta = countDownDate - now;
 
                                 // Time calculations for days, hours, minutes and seconds
-                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                var days = Math.floor(delta / (1000 * 60 * 60 * 24));
 
                                 // Display the result in the element with id="demo"
                                 document.getElementById("countdown").innerHTML = days + " days  'til the big day!";
 
                                 // If the count down is finished, write some text
-                                if (distance < 0) {
+                                if (delta < 0) {
                                     clearInterval(x);
                                     document.getElementById("countdown").innerHTML = "WE'RE MARRIED!";
                                 }
-                            }, 1000);
                         </script>
                     </div>
                 </div>
@@ -161,10 +156,8 @@
                 <div class="col-3 d-none d-lg-block"><img src="img/split_02.png" class="wp2"></div>
             </div>
             <div class="row">
-                <div class="col-4 push-2 col-6 d-sm-block d-md-none"><img src="img/split_01.png"
-                        class="wp8"></div>
-                <div class="col-4 push-2  col-6 d-sm-block d-md-none"><img src="img/split_02.png"
-                        class="wp9"></div>
+                <div class="col-4 push-2 col-6 d-sm-block d-lg-none"><img src="img/split_01.png" class="wp8"></div>
+                <div class="col-4 push-2  col-6 d-sm-block d-lg-none"><img src="img/split_02.png" class="wp9"></div>
             </div>
         </div>
     </section>
@@ -173,144 +166,163 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3 class="header">Our Party</h3>
+                    <h3 class="header">Our Wedding Party</h3>
                 </div>
             </div>
-                
+
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 leftcol text-center">
                     <div>
                         <h5>The Bride's Entourage</h5>
-                        <ul>
-                            <li><b>Jake Vojcek</b></li>
-                            <li>Shelby Lawson</li>
-                            <li>Alex Bortell</li>
-                            <li>Bailey Morgan</li>
-                            <li>Danielle Oberhaus</li>
+                            <div id="brideCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#brideCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#brideCarousel" data-slide-to="1"></li>
+                                    <li data-target="#brideCarousel" data-slide-to="2"></li>
+                                    <li data-target="#brideCarousel" data-slide-to="3"></li>
+                                    <li data-target="#brideCarousel" data-slide-to="4"></li>
+                                </ol>
+        
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/party/jakev.jpg" class="d-block w-100" alt="Jake Vojcek">
+                                        <div class="carousel-caption d-block bg-dark mb-4">
+                                            <h3>Jake Vojcek</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="carousel-item">
+                                        <img src="img/party/shelbyl.jpg" class="d-block w-100" alt="Shelby Lawson">
+                                        <div class="carousel-caption d-block  bg-dark mb-4">
+                                            <h3>Shelby Lawson</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="carousel-item">
+                                        <img src="img/party/alexB.jpg" class="d-block w-100" alt="Alex Bortell">
+                                        <div class="carousel-caption d-block  bg-dark mb-4">
+                                            <h3>Alex Bortell</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="carousel-item">
+                                        <img src="img/party/baileyM.jpg" class="d-block w-100" alt="Bailey Morgan">
+                                        <div class="carousel-caption d-block  bg-dark mb-4">
+                                            <h3>Bailey Morgan</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="carousel-item">
+                                        <img src="img/party/danielleO.jpg" class="d-block w-100" alt="Danielle Oberhaus">
+                                        <div class="carousel-caption d-block  bg-dark mb-4">
+                                            <h3>Danielle Oberhaus</h3>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" data-slide="prev" onclick="$('#brideCarousel').carousel('prev')">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" data-slide="next" onclick="$('#brideCarousel').carousel('next')">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol text-center">
-                  
-                        <h5>The Groom's Entourage</h5>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                              <li data-target="#myCarousel" data-slide-to="1"></li>
-                              <li data-target="#myCarousel" data-slide-to="2"></li>
-                              <li data-target="#myCarousel" data-slide-to="3"></li>
-                              <li data-target="#myCarousel" data-slide-to="4"></li>
-                            </ol>
-                          
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="img/party/matth.jpg" class="d-block w-100"  alt="Matt Heinz">
+
+                    <h5>The Groom's Entourage</h5>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval=false>
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/party/matth.jpg" class="d-block w-100" alt="Matt Heinz">
                                 <div class="carousel-caption d-block bg-dark mb-4">
-                                  <h3>Matt Heinz</h3>
-                                  <p>Ever since Matt and Josh met in the days leading up to their collegiate career, they have journeyed together - from the streets of Flint to Germany, and even their spiritual walks, they have been together. <br>That's why he'll continue to stand by Josh's side as his Best Man</p>
+                                    <h3>Matt Heinz</h3>
+                                    <p>Ever since Matt and Josh met in the days leading up to their collegiate career,
+                                        they have journeyed together - from the streets of Flint to Germany, and even
+                                        their spiritual walks, they have been together. <br>That's why he'll continue to
+                                        stand by Josh's side as his Best Man</p>
                                 </div>
-                              </div>
-                          
-                              <div class="carousel-item">
-                                <img src="img/party/chadf.jpg" class="d-block w-100"  alt="Chad Forhart">
-                                <div class="carousel-caption d-block  bg-dark mb-4">
-                                  <h3>Chad Forhart</h3>
-                                  <p>This is the only photo in the known universe of this mysterious man. Chad has given Josh sage wisdom and close companionship through wilderness, untamed rivers, and in shared condos. <br>Chad ponders the mysteries of the universe better than you.</p>
-                                </div>
-                              </div>
-                          
-                              <div class="carousel-item">
-                                <img src="img/party/ericm.jpg" class="d-block w-100"  alt="Eric Miller">
-                                <div class="carousel-caption d-block  bg-dark mb-4">
-                                  <h3>Eric Miller</h3>
-                                  <p>Josh has known Eric so long, that he doesn't remember life before him (seriously). Eric is a deeply reliable friend and will drop things just to spend time with you. <br>Eric rides motorcycles better than you. </p>
-                                </div>
-                              </div>
-                          
+                            </div>
+
                             <div class="carousel-item">
-                              <img src="img/party/mattb.jpg" class="d-block w-100"  alt="Matt Borton">
-                              <div class="carousel-caption d-block  bg-dark mb-4">
-                                <h3>Matt Borton</h3>
-                                <p>Matt Borton started off as cube mates with Josh, which led to being workout buddies, which led to Matt being the first spiritual mentor of Josh. <br>Matt bakes bread better than you.</p>
-                              </div>
+                                <img src="img/party/chadf.jpg" class="d-block w-100" alt="Chad Forhart">
+                                <div class="carousel-caption d-block  bg-dark mb-4">
+                                    <h3>Chad Forhart</h3>
+                                    <p>This is the only photo in the known universe of this mysterious man. Chad has
+                                        given Josh sage wisdom and close companionship through wilderness, untamed
+                                        rivers, and in shared condos. <br>Chad ponders the mysteries of the universe
+                                        better than you.</p>
+                                </div>
                             </div>
-                          
-                          <div class="carousel-item">
-                            <img src="img/party/tonym.jpg" class="d-block w-100"  alt="Tony Miller">
-                            <div class="carousel-caption d-block  bg-dark mb-4">
-                              <h3>Tony Miller</h3>
-                              <p>Tony was the first teacher to break through Josh's apathy to get him to apply himself. Without Tony, Josh probably would be on the streets. <br>Tony takes better silly pictures than you.</p>
+
+                            <div class="carousel-item">
+                                <img src="img/party/ericm.jpg" class="d-block w-100" alt="Eric Miller">
+                                <div class="carousel-caption d-block  bg-dark mb-4">
+                                    <h3>Eric Miller</h3>
+                                    <p>Josh has known Eric so long, that he doesn't remember life before him
+                                        (seriously). Eric is a deeply reliable friend and will drop things just to spend
+                                        time with you. <br>Eric rides motorcycles better than you. </p>
+                                </div>
                             </div>
-                          </div>
+
+                            <div class="carousel-item">
+                                <img src="img/party/mattb.jpg" class="d-block w-100" alt="Matt Borton">
+                                <div class="carousel-caption d-block  bg-dark mb-4">
+                                    <h3>Matt Borton</h3>
+                                    <p>Matt Borton started off as cube mates with Josh, which led to being workout
+                                        buddies, which led to Matt being the first spiritual mentor of Josh. <br>Matt
+                                        bakes bread better than you.</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/party/tonym.jpg" class="d-block w-100" alt="Tony Miller">
+                                <div class="carousel-caption d-block  bg-dark mb-4">
+                                    <h3>Tony Miller</h3>
+                                    <p>Tony was the first person to break through Josh's apathy to get him to apply
+                                        himself. Without Tony, Josh probably would be on the streets. <br>Tony takes
+                                        silly pictures better than you.</p>
+                                </div>
+                            </div>
                         </div>
-                            <!-- Left and right controls -->
-                            <a class="carousel-control-prev" data-slide="prev" onclick="$('#myCarousel').carousel('prev')">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next"  data-slide="next" onclick="$('#myCarousel').carousel('next')">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                        <div >
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" data-slide="prev" onclick="$('#myCarousel').carousel('prev')">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" data-slide="next" onclick="$('#myCarousel').carousel('next')">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="events section-padding" id="events">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 class="header">Events</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                    <div class="wp3">
-                        <h5>Ceremony <span class="time">TBD</span></h5>
-                        <p>The part with the words</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                    <div class="wp4">
-                        <h5>Reception <span class="time">TBD</span></h5>
-                        <p>The part with the drinkydoos and the dances</p>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>
-            </div>
-        </div> -->
-            <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
-        </div>
-
-        <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                        </button>
-                        <h3 class="text-center section-padding">Maybe I'll use this for something?</h3>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-
-    </section>
 
 
-    <section id="eng-pics" class="section-padding">
+    <section id="eng-pics" class="events section-padding">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -359,11 +371,6 @@
                     </a>
                 </div>
             </div>
-            <div class="container">
-                <div class="row d-none d-xl-block">
-                    <div class="col-xs-12 section-border section-padding"></div>
-                </div>
-            </div>
             <!--<div class="row">
         <div class="col-md-12">
             <div class="diamond floating-logo">
@@ -375,30 +382,6 @@
     </section>
 
 
-    <section id="gifts" class="events section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 class="header">In Lieu of Gifts...</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>
-                        We have more than we could want, so although we accept gifts, we kindly ask that you consider
-                        instead, donating to one of the following charities:
-                    <ul class="w3-ul w3-hoverable">
-                        <li><a href="https://secure.gcfb.org/site/Donation2?2500.donation=form1&df_id=2500&mfc_pref=T">Gleaners
-                                Community Food Bank</a></li>
-                        <li><a
-                                href="https://action.aclu.org/give/make-gift-honor-someone-special-aclu-foundation-michigan">ACLU
-                                Michigan</a></li>
-                        <li><a href="https://www.charitywater.org/donate">charity: water</a></li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-    </section>
 
 
     <section id="video-bg">
@@ -441,6 +424,53 @@
 
     </section>
 
+    <section class="events section-padding" id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">Events</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                    <div class="wp3">
+                        <h5>Ceremony <span class="time">TBD</span></h5>
+                        <p>The part with the words</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                    <div class="wp4">
+                        <h5>Reception <span class="time">TBD</span></h5>
+                        <p>The part with the drinkydoos and the dances</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                </a>
+            </div>
+        </div> -->
+            <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+        </div>
+
+        <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                        </button>
+                        <h3 class="text-center section-padding">Maybe I'll use this for something?</h3>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </section>
     <section id="map" class="section-padding">
         <div class="text-center">
             <h3>How do I get there?</h3>
@@ -484,7 +514,33 @@
     </section>
 
 
-    <section id="hotels" class="events section-padding">
+    <section id="gifts" class="events section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">In Lieu of Gifts...</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        We have more than we could want, so although we accept gifts, we kindly ask that you 
+                        instead, donate to one of the charities below.
+                        <br><b>Please donate in Honor of "Jess & Josh Oberhaus" so we can track the overall impact!</b>
+                        <br><i>As the day approaches a charity registry will be created on <a href="https://thegoodbeginning.com/">The Good Beginning</a> </i>
+                    <ul class="w3-ul w3-hoverable">
+                        <li><a href="https://secure.gcfb.org/site/Donation2?2500.donation=form1&df_id=2500&mfc_pref=T">Gleaners
+                                Community Food Bank</a></li>
+                        <li><a
+                                href="https://action.aclu.org/give/make-gift-honor-someone-special-aclu-foundation-michigan">ACLU
+                                Michigan</a></li>
+                        <li><a href="https://www.charitywater.org/donate">charity: water</a></li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section id="hotels" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">

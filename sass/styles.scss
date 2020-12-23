@@ -838,7 +838,9 @@ Google map
 #map-canvas {
   height: 400px;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
+  display: block;
+  max-width: inherit;
 }
 #map-content-wrapper {
   position: relative;
