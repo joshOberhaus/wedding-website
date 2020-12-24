@@ -413,18 +413,27 @@
             // var vid = $('#v0')[0]; // jquery optio
             var clientHeight = document.documentElement.clientHeight;
 
-            // Use requestAnimationFrame for smooth playback
-            function scrollPlay() {
+            let accelamount = 0.3;
+            let delay = 0;
+
+// Set a timeout to run after scrolling ends
+isScrolling = setInterval(function() {
+
                 var relPos = Math.min(Math.max((clientHeight - vid.getBoundingClientRect().y) / clientHeight, 0), 1)
                 var duration = vid.duration;
                 if (isNaN(relPos)) relPos = 0;
                 if (isNaN(duration)) duration = 0;
-                var frameNumber = relPos * duration;
+                if (Math.abs(relPos - delay) > 0.001)
+                { 
+                delay += (relPos - delay) * accelamount;
+                var frameNumber = delay * duration;
                 vid.currentTime = frameNumber;
-                window.requestAnimationFrame(scrollPlay);
-            }
+                console.log(delay);
+                }
+            
 
-            window.requestAnimationFrame(scrollPlay);
+},42);
+
 
         </script>
         </div>
